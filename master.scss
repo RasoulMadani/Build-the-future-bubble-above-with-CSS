@@ -1,0 +1,28 @@
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+.main{
+    width: 100%;
+    height: 100vh;  
+    background-image: linear-gradient(45deg,rgb(17,17,38),rgb(15,15,68),rgb(1,1,27));
+    overflow: hidden;
+    &:hover>div{
+        bottom:900px;
+    }
+    >div{
+        position: absolute;
+        transition: 20s;
+        @for $i from 1 through 300 {
+            &:nth-of-type(#{$i}){
+                $wh: random(10); 
+                background-color: rgb(random(256),random(256),random(256));
+                bottom: -(random(600)+px);
+                left: random(100)+0%;
+                width: $wh+px;
+                height: $wh+px;
+                border-radius: 50%;
+            } 
+
+        }
+    }
+}
