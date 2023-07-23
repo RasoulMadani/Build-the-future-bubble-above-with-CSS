@@ -1,22 +1,28 @@
 *{
     padding: 0;margin: 0;box-sizing: border-box;
 }
-.main{
+main{
     width: 100%;
     height: 100vh;  
+    position: relative;
     background-image: linear-gradient(45deg,rgb(17,17,38),rgb(15,15,68),rgb(1,1,27));
     overflow: hidden;
     &:hover>div{
-        bottom:900px;
+        bottom:2000px !important;
     }
     >div{
+        color: white;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
         position: absolute;
-        transition: 20s;
-        @for $i from 1 through 300 {
+        transition: 60s;
+        @for $i from 1 through 3000 {
             &:nth-of-type(#{$i}){
-                $wh: random(10); 
+                $wh: random(100); 
                 background-color: rgb(random(256),random(256),random(256));
-                bottom: -(random(600)+px);
+                bottom: -(random(20000)+px);
                 left: random(100)+0%;
                 width: $wh+px;
                 height: $wh+px;
